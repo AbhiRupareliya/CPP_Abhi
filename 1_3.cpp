@@ -1,22 +1,23 @@
-// Prepared by 21CE117_ Abhi rupareliya
-#include<iostream>
-#include<iomanip>
+// prepare by 21ce117_Abhi rupareliya
+#include <iostream>
+// setprecision is defined in iomanip.
+#include <iomanip>
 using namespace std;
-
 int main()
 {
-    float n1,n2,n;
-    cout<<"Enter float number 1:";
-    cin>>n1;
-    cout<<"Enter float number 2:";
-    cin>>n2;
+    float *p1, *p2;
+    float a, b, sum;
     
-    cout.precision(2);
-    n=n1+n2;
-    cout<<"Addition using fixed:"<<fixed<<n<<endl;
-    cout<<"Addition using scientific:"<<scientific<<n<<endl;
-    cout<<fixed;
-    cout<<"Addition using setprecision():"<<setprecision(3)<<n<<endl;
-    cout<<"Prepared by 21CE117_ Abhi rupareliya";
+    cout << "Enter two numbers" << endl;
+    cin >> a >> b;
 
+    p1 = &a;
+    p2 = &b;
+    sum = *p1 + *p2;
+
+    cout << "Using only sum:" << sum << endl;
+    cout << "Using setprecision:" << setprecision(2) << sum << endl;
+    cout << "Using fixed setprecision:" << fixed << setprecision(2) << sum << endl;
+    cout << "Using scientific setprecision:" << scientific << setprecision(2) << sum << endl;
+    cout << "prepare by 21ce117_Abhi rupareliya";
 }
